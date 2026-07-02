@@ -156,10 +156,9 @@ nav.scrolled{border-bottom-color:var(--line);box-shadow:0 6px 24px rgba(23,35,31
 .hero-visual{position:relative;justify-self:center;width:min(360px,86vw)}
 /* soft glow behind the portrait — gives a "floating / integrated" feel now, and
    shows through once a transparent cutout is dropped in (data-portrait="cutout"). */
-.hero-glow{position:absolute;z-index:0;inset:-16% -12% -10% -12%;pointer-events:none;
-  background:radial-gradient(58% 52% at 62% 38%,rgba(47,127,117,.22),transparent 70%),
-            radial-gradient(48% 44% at 28% 78%,rgba(184,135,45,.18),transparent 72%);
-  filter:blur(24px)}
+.hero-glow{position:absolute;z-index:0;inset:6%;border-radius:50%;pointer-events:none;
+  background:radial-gradient(closest-side,rgba(47,127,117,.20),rgba(184,135,45,.12) 52%,transparent 74%);
+  filter:blur(48px)}
 .portrait-frame{position:relative;z-index:1;aspect-ratio:4/5;border-radius:22px;overflow:hidden;
   box-shadow:0 30px 70px rgba(23,35,31,.16),0 0 0 1px rgba(23,35,31,.06);background:var(--surface-soft)}
 .portrait-frame picture{position:absolute;inset:0;display:block}
@@ -167,7 +166,7 @@ nav.scrolled{border-bottom-color:var(--line);box-shadow:0 6px 24px rgba(23,35,31
 /* Floating transparent-cutout mode — set data-portrait="cutout" on .hero-visual and
    provide assets/portrait-cutout.webp; frame/tag drop away and the cutout floats. */
 .hero-visual[data-portrait="cutout"] .portrait-frame{background:none;box-shadow:none;overflow:visible;border-radius:0}
-.hero-visual[data-portrait="cutout"] .portrait-frame img{object-fit:contain;filter:drop-shadow(0 26px 42px rgba(23,35,31,.30))}
+.hero-visual[data-portrait="cutout"] .portrait-frame img{object-fit:contain;object-position:bottom;filter:drop-shadow(0 20px 36px rgba(23,35,31,.24));-webkit-mask-image:linear-gradient(to bottom,#000 86%,transparent);mask-image:linear-gradient(to bottom,#000 86%,transparent)}
 .hero-visual[data-portrait="cutout"] .portrait-tag{display:none}
 .portrait-tag{
   position:absolute;top:14px;left:14px;
@@ -383,15 +382,13 @@ footer p{font-family:'IBM Plex Mono',monospace;font-size:.7rem;color:rgba(246,24
         <a class="btn btn-ghost" href="Ahmed_Elshaer_Canonical_CV.pdf" download>Download CV ↓</a>
       </div>
     </div>
-    <div class="hero-visual enter d3" data-portrait="framed">
+    <div class="hero-visual enter d3" data-portrait="cutout">
       <div class="hero-glow" aria-hidden="true"></div>
       <div class="portrait-frame">
         <picture>
-          <!-- Floating cutout swap (provide your own asset — see assets/HIGGSFIELD_ASSETS.md):
-               1) export a transparent cutout to assets/portrait-cutout.webp
-               2) set data-portrait="cutout" on the .hero-visual above
-               3) uncomment the <source> line below. -->
-          <!-- <source srcset="assets/portrait-cutout.webp" type="image/webp"> -->
+          <!-- Floating transparent cutout (active). To revert to the framed photo:
+               set data-portrait="framed" on .hero-visual above and delete the cutout <source>. -->
+          <source srcset="assets/portrait-cutout.webp" type="image/webp">
           <source srcset="assets/portrait-studio.webp" type="image/webp">
           <img src="assets/portrait-studio.png" width="760" height="950" alt="Ahmed Elshaer, finance and operations automation specialist, professional portrait">
         </picture>
