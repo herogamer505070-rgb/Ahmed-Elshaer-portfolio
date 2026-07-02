@@ -4,12 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ahmed Elshaer — Finance & Operations Automation Specialist</title>
-<meta name="description" content="I build finance automation systems for real-estate teams — collections, reservations, dashboards, and WhatsApp reporting. 10+ years in finance, reporting cut from hours to minutes.">
+<meta name="description" content="I build automation systems for finance and operations teams — reporting, dashboards, collections, CRM workflows, and WhatsApp automation. 10+ years in finance; reporting cut from hours to minutes.">
 <meta name="theme-color" content="#f6f1e8">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="canonical" href="https://ahmed-elshaer-protfolio.vercel.app/">
 <meta property="og:title" content="Ahmed Elshaer — Finance & Operations Automation Specialist">
-<meta property="og:description" content="I build finance automation systems for real-estate teams — collections, reservations, dashboards, and WhatsApp reporting. Reporting cut from 3–4 hours to 5 minutes.">
+<meta property="og:description" content="I build automation systems for finance and operations teams — reporting, dashboards, collections, CRM workflows, and WhatsApp automation. Reporting cut from 3–4 hours to 5 minutes.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://ahmed-elshaer-protfolio.vercel.app/">
 <meta property="og:image" content="assets/og-cover.png">
@@ -17,7 +17,7 @@
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Ahmed Elshaer — Finance & Operations Automation Specialist">
-<meta name="twitter:description" content="Finance automation systems for real-estate teams — collections, reservations, dashboards, WhatsApp reporting.">
+<meta name="twitter:description" content="Automation systems for finance and operations teams — reporting, dashboards, collections, CRM workflows, WhatsApp automation.">
 <meta name="twitter:image" content="assets/og-cover.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -62,6 +62,12 @@ img{max-width:100%;display:block}
 .wrap{max-width:1160px;margin:0 auto;padding:0 26px}
 section{padding:96px 0;scroll-margin-top:calc(var(--nav-h) + 20px)}
 :target{scroll-margin-top:calc(var(--nav-h) + 20px)}
+@media(max-width:620px){
+  section{padding:60px 0}
+  .wrap{padding:0 20px}
+  .sec-title{font-size:clamp(1.55rem,6.5vw,2rem)}
+  .sec-lead,.sec-note{font-size:.95rem}
+}
 
 /* ---------- shared bits ---------- */
 .eyebrow{
@@ -72,6 +78,7 @@ section{padding:96px 0;scroll-margin-top:calc(var(--nav-h) + 20px)}
 .eyebrow::before{content:"";width:30px;height:2px;background:var(--gold);border-radius:2px}
 .sec-title{font-size:clamp(1.8rem,3.8vw,2.6rem);margin-bottom:14px;letter-spacing:-.01em}
 .sec-lead{color:var(--muted);max-width:640px;font-size:1.04rem}
+.sec-note{color:var(--muted);max-width:660px;font-size:.9rem;margin-top:14px;padding-left:14px;border-left:2px solid var(--gold);font-style:italic}
 .btn{
   padding:13px 26px;border-radius:999px;font-weight:600;font-size:.92rem;
   transition:.22s ease;display:inline-flex;align-items:center;justify-content:center;gap:8px;
@@ -124,8 +131,7 @@ nav.scrolled{border-bottom-color:var(--line);box-shadow:0 6px 24px rgba(23,35,31
 .mobile-menu a{padding:13px 4px;font-size:.98rem;color:var(--green);border-bottom:1px solid var(--line);font-weight:500}
 .mobile-menu a:last-child{border-bottom:none}
 .mobile-menu.open{display:flex}
-@media(max-width:880px){.nav-links{display:none}.burger{display:block}}
-@media(max-width:380px){.nav-cta{display:none}}
+@media(max-width:880px){.nav-links{display:none}.burger{display:block}.nav-cta{display:none}}
 
 /* ---------- hero ---------- */
 .hero{
@@ -148,9 +154,21 @@ nav.scrolled{border-bottom-color:var(--line);box-shadow:0 6px 24px rgba(23,35,31
 .hero-metrics .hm .l{font-size:.78rem;color:var(--muted);line-height:1.35;margin-top:2px}
 /* hero visual */
 .hero-visual{position:relative;justify-self:center;width:min(360px,86vw)}
-.portrait-frame{position:relative;aspect-ratio:4/5;border-radius:22px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);background:var(--surface-soft)}
+/* soft glow behind the portrait — gives a "floating / integrated" feel now, and
+   shows through once a transparent cutout is dropped in (data-portrait="cutout"). */
+.hero-glow{position:absolute;z-index:0;inset:-16% -12% -10% -12%;pointer-events:none;
+  background:radial-gradient(58% 52% at 62% 38%,rgba(47,127,117,.22),transparent 70%),
+            radial-gradient(48% 44% at 28% 78%,rgba(184,135,45,.18),transparent 72%);
+  filter:blur(24px)}
+.portrait-frame{position:relative;z-index:1;aspect-ratio:4/5;border-radius:22px;overflow:hidden;
+  box-shadow:0 30px 70px rgba(23,35,31,.16),0 0 0 1px rgba(23,35,31,.06);background:var(--surface-soft)}
 .portrait-frame picture{position:absolute;inset:0;display:block}
 .portrait-frame img{width:100%;height:100%;object-fit:cover;display:block}
+/* Floating transparent-cutout mode — set data-portrait="cutout" on .hero-visual and
+   provide assets/portrait-cutout.webp; frame/tag drop away and the cutout floats. */
+.hero-visual[data-portrait="cutout"] .portrait-frame{background:none;box-shadow:none;overflow:visible;border-radius:0}
+.hero-visual[data-portrait="cutout"] .portrait-frame img{object-fit:contain;filter:drop-shadow(0 26px 42px rgba(23,35,31,.30))}
+.hero-visual[data-portrait="cutout"] .portrait-tag{display:none}
 .portrait-tag{
   position:absolute;top:14px;left:14px;
   background:rgba(255,253,247,.9);backdrop-filter:blur(6px);
@@ -159,7 +177,7 @@ nav.scrolled{border-bottom-color:var(--line);box-shadow:0 6px 24px rgba(23,35,31
   color:var(--green);padding:6px 13px;white-space:nowrap;
 }
 .hero-chip{
-  position:absolute;bottom:-18px;right:-14px;background:var(--surface);
+  position:absolute;z-index:2;bottom:-18px;right:-14px;background:var(--surface);
   border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);
   padding:13px 16px;display:flex;align-items:center;gap:12px;max-width:230px;
 }
@@ -308,8 +326,11 @@ footer{background:var(--green);color:var(--bg);padding:30px 0;text-align:center}
 footer p{font-family:'IBM Plex Mono',monospace;font-size:.7rem;color:rgba(246,241,232,.7);letter-spacing:.1em}
 
 /* ---------- reveal (no-JS safe: only active when .js present) ---------- */
-.js .rv{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
-.js .rv.on{opacity:1;transform:none}
+/* Reveal is transform-only: content stays fully visible (opacity 1) even if a
+   section is never scrolled into view — so audits/no-scroll renders never show
+   blank sections. */
+.js .rv{transform:translateY(16px);transition:transform .7s ease}
+.js .rv.on{transform:none}
 .js .enter{opacity:0;animation:rise .7s cubic-bezier(.2,.7,.2,1) forwards}
 @keyframes rise{to{opacity:1;transform:none}}
 .d1{animation-delay:.04s}.d2{animation-delay:.14s}.d3{animation-delay:.26s}.d4{animation-delay:.38s}.d5{animation-delay:.5s}
@@ -348,8 +369,8 @@ footer p{font-family:'IBM Plex Mono',monospace;font-size:.7rem;color:rgba(246,24
   <div class="wrap hero-grid">
     <div>
       <div class="hero-name enter d1">Ahmed Elshaer</div>
-      <h1 class="enter d2">I build <em>finance automation</em> systems for real-estate teams.</h1>
-      <p class="hero-sub enter d3">I help finance and operations teams replace manual spreadsheets, delayed reports, and inconsistent follow-up with reliable systems for <strong>collections, reservations, dashboards, and WhatsApp reporting</strong>.</p>
+      <h1 class="enter d2">I build <em>automation systems</em> for finance and operations teams.</h1>
+      <p class="hero-sub enter d3">I help teams replace manual spreadsheets, delayed reports, and inconsistent follow-up with <strong>practical systems for reporting, dashboards, collections, CRM workflows, and WhatsApp automation</strong>.</p>
       <div class="roles enter d3">BUILDING / <b id="roleWord">Real Estate CRM &amp; Reservations</b></div>
       <div class="hero-metrics enter d4">
         <div class="hm"><div class="n">10+ yrs</div><div class="l">Finance &amp; accounting</div></div>
@@ -362,9 +383,15 @@ footer p{font-family:'IBM Plex Mono',monospace;font-size:.7rem;color:rgba(246,24
         <a class="btn btn-ghost" href="Ahmed_Elshaer_Canonical_CV.pdf" download>Download CV ↓</a>
       </div>
     </div>
-    <div class="hero-visual enter d3">
+    <div class="hero-visual enter d3" data-portrait="framed">
+      <div class="hero-glow" aria-hidden="true"></div>
       <div class="portrait-frame">
         <picture>
+          <!-- Floating cutout swap (provide your own asset — see assets/HIGGSFIELD_ASSETS.md):
+               1) export a transparent cutout to assets/portrait-cutout.webp
+               2) set data-portrait="cutout" on the .hero-visual above
+               3) uncomment the <source> line below. -->
+          <!-- <source srcset="assets/portrait-cutout.webp" type="image/webp"> -->
           <source srcset="assets/portrait-studio.webp" type="image/webp">
           <img src="assets/portrait-studio.png" width="760" height="950" alt="Ahmed Elshaer, finance and operations automation specialist, professional portrait">
         </picture>
@@ -412,8 +439,9 @@ footer p{font-family:'IBM Plex Mono',monospace;font-size:.7rem;color:rgba(246,24
 <section id="systems" style="padding-top:0">
   <div class="wrap">
     <div class="eyebrow rv">Featured Systems</div>
-    <h2 class="sec-title rv">Systems I've built and deployed</h2>
-    <p class="sec-lead rv">Three production systems for real-estate and finance operations — each replaced hours of manual work with something reliable that runs on its own.</p>
+    <h2 class="sec-title rv">Systems built for real business operations</h2>
+    <p class="sec-lead rv">Practical automation systems built around real finance and operations bottlenecks — from collection reporting to CRM workflows and scheduled follow-up.</p>
+    <p class="sec-note rv">Most examples here come from real-estate operations — that's where my recent production work is strongest. The same workflow thinking applies to finance, reporting, and customer follow-up in any operations-heavy business.</p>
 
     <!-- System 01 -->
     <article class="sys rv">
@@ -527,25 +555,25 @@ footer p{font-family:'IBM Plex Mono',monospace;font-size:.7rem;color:rgba(246,24
         <div class="ico" aria-hidden="true">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2f7f75" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M4 12h16M4 17h10"/><circle cx="19" cy="17" r="2"/></svg>
         </div>
-        <h3>Finance Workflow Automation</h3>
-        <p>Replace repetitive finance and operations steps — data entry, consolidation, reporting — with reliable automated systems.</p>
+        <h3>Finance &amp; Operations Workflow Automation</h3>
+        <p>Replace repetitive reporting, reconciliation, data entry, and follow-up work with reliable automated workflows.</p>
         <div class="tags"><span class="tag">n8n</span><span class="tag">Python</span><span class="tag">Excel automation</span><span class="tag">API integration</span></div>
-      </div>
-      <div class="card rv">
-        <div class="ico" aria-hidden="true">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2f7f75" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V8l6-4 6 4v13"/><path d="M15 21V11l6 4v6"/><path d="M7 12h0M7 16h0"/></svg>
-        </div>
-        <h3>Real Estate CRM &amp; Reservations</h3>
-        <p>Lead distribution, unit-inventory tracking, reservation dashboards, payment offers, and commission management.</p>
-        <div class="tags"><span class="tag">CRM</span><span class="tag">Reservations</span><span class="tag">Sales ops</span><span class="tag">Commissions</span></div>
       </div>
       <div class="card rv">
         <div class="ico" aria-hidden="true">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2f7f75" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg>
         </div>
-        <h3>Dashboards, Reporting &amp; Follow-Up</h3>
-        <p>Automated collection reports, cheque follow-up, and one-click management summaries — delivered on WhatsApp and Telegram.</p>
-        <div class="tags"><span class="tag">Power BI</span><span class="tag">PDF reports</span><span class="tag">WhatsApp</span><span class="tag">AR / AP</span></div>
+        <h3>Dashboards, Reporting &amp; Business Visibility</h3>
+        <p>Turn scattered spreadsheets and operational data into clear management reports, dashboards, and scheduled summaries.</p>
+        <div class="tags"><span class="tag">Power BI</span><span class="tag">Excel</span><span class="tag">PDF reports</span><span class="tag">Scheduled summaries</span></div>
+      </div>
+      <div class="card rv">
+        <div class="ico" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2f7f75" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H8l-4 4V5a2 2 0 0 1 2-2h13a2 2 0 0 1 2 2z"/><path d="M8 9h8M8 13h5"/></svg>
+        </div>
+        <h3>CRM, Follow-Up &amp; Communication Automation</h3>
+        <p>Automate lead and customer follow-up, WhatsApp reminders, task alerts, and sales or operations tracking workflows.</p>
+        <div class="tags"><span class="tag">CRM</span><span class="tag">WhatsApp</span><span class="tag">Follow-up</span><span class="tag">Task alerts</span></div>
       </div>
     </div>
   </div>
@@ -604,9 +632,9 @@ footer p{font-family:'IBM Plex Mono',monospace;font-size:.7rem;color:rgba(246,24
     <h2 class="sec-title rv">Finance-fluent. Tech-capable.</h2>
     <div class="skill-grid">
       <div class="skill-box rv"><h3>Finance &amp; Accounting</h3><div class="tags"><span class="tag">Odoo ERP</span><span class="tag">QuickBooks</span><span class="tag">Treasury</span><span class="tag">Bank Reconciliation</span><span class="tag">Month-End Close</span><span class="tag">AR / AP</span><span class="tag">Basic SAP</span></div></div>
-      <div class="skill-box rv"><h3>Automation &amp; AI</h3><div class="tags"><span class="tag">n8n</span><span class="tag">AI-Assisted Development</span><span class="tag">Workflow Automation</span><span class="tag">CRM Workflows</span><span class="tag">Reservation Systems</span></div></div>
+      <div class="skill-box rv"><h3>Automation &amp; Workflow Design</h3><div class="tags"><span class="tag">n8n</span><span class="tag">AI-Assisted Development</span><span class="tag">Workflow Automation</span><span class="tag">Process Design</span><span class="tag">Scheduled Jobs</span></div></div>
       <div class="skill-box rv"><h3>Reporting &amp; Analytics</h3><div class="tags"><span class="tag">Advanced Excel</span><span class="tag">PivotTables</span><span class="tag">Power BI</span><span class="tag">Financial Reporting</span><span class="tag">Data Analysis</span></div></div>
-      <div class="skill-box rv"><h3>Real Estate Operations</h3><div class="tags"><span class="tag">Reservations</span><span class="tag">Unit Inventory</span><span class="tag">Commission Tracking</span><span class="tag">Payment Offers</span><span class="tag">Collections</span></div></div>
+      <div class="skill-box rv"><h3>CRM &amp; Operations</h3><div class="tags"><span class="tag">Customer Follow-up</span><span class="tag">CRM Workflows</span><span class="tag">Reservations</span><span class="tag">Commission Tracking</span><span class="tag">Collections</span></div></div>
       <div class="skill-box rv"><h3>Development Tools</h3><div class="tags"><span class="tag">Python</span><span class="tag">JavaScript</span><span class="tag">React</span><span class="tag">HTML / CSS</span><span class="tag">Git</span></div></div>
       <div class="skill-box rv"><h3>Languages</h3><div class="tags"><span class="tag">Arabic — native</span><span class="tag">English — professional</span></div></div>
     </div>
@@ -626,7 +654,7 @@ footer p{font-family:'IBM Plex Mono',monospace;font-size:.7rem;color:rgba(246,24
       <div>
         <div class="eyebrow rv">Contact</div>
         <h2 class="sec-title rv">Let's work together</h2>
-        <p class="sec-lead rv">Available for finance operations, real-estate systems, and automation projects. I usually reply within 24 hours.</p>
+        <p class="sec-lead rv">Available for finance operations, reporting automation, CRM workflows, and business process automation projects. I usually reply within 24 hours.</p>
         <div class="avail rv"><span class="d"></span>Available for new projects</div>
         <div class="cta-row rv" style="margin-top:22px">
           <a class="btn btn-green" href="https://wa.me/201004650795" target="_blank" rel="noopener">Chat on WhatsApp</a>
@@ -712,11 +740,11 @@ menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
 
 // Rotating role keywords (skipped under reduced motion)
 const roles = [
+  'Finance & Operations Reporting',
+  'Collection & Follow-Up Automation',
   'Real Estate CRM & Reservations',
-  'Collection & Finance Reporting',
-  'WhatsApp Follow-Up Automation',
-  'Automated Dashboards',
-  'n8n Workflow Systems'
+  'WhatsApp & Telegram Workflows',
+  'Business Process Automation'
 ];
 const roleEl = document.getElementById('roleWord');
 if (roleEl && !reduced) {
