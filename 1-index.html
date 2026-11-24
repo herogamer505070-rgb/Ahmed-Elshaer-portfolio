@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ahmed Elshaer — Senior Financial Accountant | Finance & AI Automation Specialist</title>
+<meta name="description" content="Senior Financial Accountant with 10 years across real estate, tourism, and investment — and the builder of two systems now in use at his employer: a real-estate sales-cycle system and a collections app with WhatsApp reminders.">
+<meta name="theme-color" content="#f6f1e8">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="canonical" href="https://ahmed-elshaer-protfolio.vercel.app/">
+<meta property="og:title" content="Ahmed Elshaer — Finance & Operations Automation Specialist">
+<meta property="og:description" content="Senior Financial Accountant with 10 years in finance — and the builder of two systems now in use at his employer: a real-estate sales-cycle system and a collections app with WhatsApp reminders.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ahmed-elshaer-protfolio.vercel.app/">
+<meta property="og:image" content="assets/og-cover.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Ahmed Elshaer — Finance & Operations Automation Specialist">
+<meta name="twitter:description" content="Senior Financial Accountant who builds the systems finance teams run on: sales-cycle automation, collections, and WhatsApp follow-up.">
+<meta name="twitter:image" content="assets/og-cover.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Outfit:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+:root{
+  --bg:#f6f1e8;
+  --surface:#fffdf7;
+  --surface-soft:#edf3ee;
+  --ink:#17231f;
+  --muted:#5c6a63;
+  --green:#123b32;
+  --green-2:#0f3129;
+  --teal:#2f7f75;
+  --teal-deep:#276b62;
+  --gold:#b8872d;
+  --gold-deep:#8a6420;
+  --line:rgba(23,35,31,.12);
+  --line-strong:rgba(23,35,31,.2);
+  --shadow:0 18px 50px rgba(23,35,31,.10);
+  --shadow-sm:0 6px 20px rgba(23,35,31,.07);
+  --radius:16px;
+  --nav-h:64px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:'Outfit',system-ui,sans-serif;
+  font-weight:400;
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+::selection{background:var(--gold);color:#fff}
+h1,h2,h3{font-family:'Fraunces',Georgia,serif;font-weight:500;line-height:1.14;color:var(--green)}
+.mono{font-family:'IBM Plex Mono',monospace}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.wrap{max-width:1160px;margin:0 auto;padding:0 26px}
+section{padding:96px 0;scroll-margin-top:calc(var(--nav-h) + 20px)}
+:target{scroll-margin-top:calc(var(--nav-h) + 20px)}
+@media(max-width:620px){
+  section{padding:60px 0}
+  .wrap{padding:0 20px}
+  .sec-title{font-size:clamp(1.55rem,6.5vw,2rem)}
+  .sec-lead,.sec-note{font-size:.95rem}
+}
+
+/* ---------- shared bits ---------- */
+.eyebrow{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--gold-deep);display:flex;align-items:center;gap:14px;margin-bottom:16px;font-weight:500;
+}
+.eyebrow::before{content:"";width:30px;height:2px;background:var(--gold);border-radius:2px}
+.sec-title{font-size:clamp(1.8rem,3.8vw,2.6rem);margin-bottom:14px;letter-spacing:-.01em}
+.sec-lead{color:var(--muted);max-width:640px;font-size:1.04rem}
+.sec-note{color:var(--muted);max-width:660px;font-size:.9rem;margin-top:14px;padding-left:14px;border-left:2px solid var(--gold);font-style:italic}
+.btn{
+  padding:13px 26px;border-radius:999px;font-weight:600;font-size:.92rem;
+  transition:.22s ease;display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  border:1px solid transparent;cursor:pointer;white-space:nowrap;
+}
+.btn-gold{background:var(--gold);color:#fff;box-shadow:0 8px 20px rgba(184,135,45,.28)}
+.btn-gold:hover{background:var(--gold-deep);transform:translateY(-2px)}
+.btn-green{background:var(--green);color:var(--bg)}
+.btn-green:hover{background:var(--green-2);transform:translateY(-2px)}
+.btn-ghost{border-color:var(--line-strong);color:var(--green);background:transparent}
+.btn-ghost:hover{border-color:var(--green);background:var(--surface);transform:translateY(-2px)}
+.btn:active{transform:scale(.98)}
+.cta-row{display:flex;gap:12px;flex-wrap:wrap}
+.tags{display:flex;flex-wrap:wrap;gap:7px}
+.tag{
+  font-family:'IBM Plex Mono',monospace;font-size:.66rem;letter-spacing:.04em;
+  color:var(--teal-deep);background:var(--surface-soft);border:1px solid var(--line);
+  border-radius:999px;padding:5px 12px;transition:.2s;
+}
+.tag:hover{border-color:var(--teal);color:var(--teal-deep);transform:translateY(-1px)}
+.mock-note{font-family:'IBM Plex Mono',monospace;font-size:.68rem;letter-spacing:.06em;color:var(--muted);margin-top:10px;text-align:right}
+
+/* ---------- nav ---------- */
+nav{
+  position:fixed;inset:0 0 auto 0;z-index:60;height:var(--nav-h);
+  background:rgba(246,241,232,.82);backdrop-filter:blur(14px);
+  border-bottom:1px solid transparent;transition:border-color .3s,box-shadow .3s,background .3s;
+}
+nav.scrolled{border-bottom-color:var(--line);box-shadow:0 6px 24px rgba(23,35,31,.06);background:rgba(246,241,232,.94)}
+.nav-in{max-width:1160px;margin:0 auto;height:var(--nav-h);padding:0 26px;display:flex;align-items:center;justify-content:space-between}
+.brand{font-family:'Fraunces',serif;font-size:1.18rem;letter-spacing:.01em;color:var(--green);display:flex;align-items:center;gap:10px}
+.brand .mark{width:30px;height:30px;border-radius:8px;overflow:hidden;display:block;flex:none}
+.brand .mark img{width:100%;height:100%;display:block}
+.brand b{color:var(--gold-deep);font-weight:600}
+.nav-links{display:flex;gap:24px;font-size:.88rem;font-weight:500;color:var(--muted)}
+.nav-links a{position:relative;padding-bottom:3px;transition:color .2s}
+.nav-links a::after{content:"";position:absolute;left:0;bottom:0;width:100%;height:2px;background:var(--gold);border-radius:2px;transform:scaleX(0);transform-origin:left;transition:transform .25s ease}
+.nav-links a:hover,.nav-links a.active{color:var(--green)}
+.nav-links a:hover::after,.nav-links a.active::after{transform:scaleX(1)}
+.nav-right{display:flex;align-items:center;gap:12px}
+.nav-cta{
+  font-size:.82rem;font-weight:600;background:var(--green);color:var(--bg);
+  padding:9px 18px;border-radius:999px;transition:.22s;
+}
+.nav-cta:hover{background:var(--green-2);transform:translateY(-1px)}
+.burger{display:none;background:none;border:1px solid var(--line-strong);border-radius:9px;padding:8px 10px;cursor:pointer}
+.burger span{display:block;width:18px;height:2px;background:var(--green);margin:4px 0;transition:.3s;border-radius:2px}
+.burger[aria-expanded="true"] span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+.burger[aria-expanded="true"] span:nth-child(2){opacity:0}
+.burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+.mobile-menu{display:none;flex-direction:column;padding:8px 26px 18px;background:rgba(246,241,232,.98);border-bottom:1px solid var(--line)}
+.mobile-menu a{padding:13px 4px;font-size:.98rem;color:var(--green);border-bottom:1px solid var(--line);font-weight:500}
+.mobile-menu a:last-child{border-bottom:none}
+.mobile-menu.open{display:flex}
+@media(max-width:880px){.nav-links{display:none}.burger{display:block}.nav-cta{display:none}}
+
+/* ---------- hero ---------- */
+.hero{
+  position:relative;overflow:hidden;
+  padding:calc(var(--nav-h) + 64px) 0 80px;
+  background:
+    radial-gradient(1100px 520px at 84% -6%,rgba(47,127,117,.14),transparent 60%),
+    radial-gradient(900px 480px at -8% 10%,rgba(184,135,45,.10),transparent 55%),
+    var(--bg);
+}
+.hero-grid{display:grid;grid-template-columns:1.12fr .88fr;gap:56px;align-items:center}
+.hero h1{font-size:clamp(2.3rem,5.4vw,4rem);letter-spacing:-.02em}
+.hero h1 em{font-style:normal;color:var(--gold-deep)}
+.hero-name{font-family:'IBM Plex Mono',monospace;font-size:.82rem;letter-spacing:.18em;text-transform:uppercase;color:var(--teal-deep);margin-bottom:18px;display:flex;align-items:center;gap:12px}
+.hero-name::before{content:"";width:30px;height:2px;background:var(--teal);border-radius:2px}
+.hero-sub{color:var(--muted);font-size:1.08rem;max-width:540px;margin:22px 0 26px}
+.hero-sub strong{color:var(--ink);font-weight:600}
+.hero-metrics{display:flex;gap:30px;flex-wrap:wrap;margin:0 0 30px;padding:20px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.hero-metrics .hm .n{font-family:'Fraunces',serif;font-size:1.5rem;color:var(--green);font-weight:600;line-height:1.1}
+.hero-metrics .hm .l{font-size:.78rem;color:var(--muted);line-height:1.35;margin-top:2px}
+/* hero visual */
+.hero-visual{position:relative;justify-self:center;width:min(360px,86vw)}
+/* soft glow behind the portrait — gives a "floating / integrated" feel now, and
+   shows through once a transparent cutout is dropped in (data-portrait="cutout"). */
+.hero-glow{position:absolute;z-index:0;inset:6%;border-radius:50%;pointer-events:none;
+  background:radial-gradient(closest-side,rgba(47,127,117,.20),rgba(184,135,45,.12) 52%,transparent 74%);
+  filter:blur(48px)}
+.portrait-frame{position:relative;z-index:1;aspect-ratio:4/5;border-radius:22px;overflow:hidden;
+  box-shadow:0 30px 70px rgba(23,35,31,.16),0 0 0 1px rgba(23,35,31,.06);background:var(--surface-soft)}
+.portrait-frame picture{position:absolute;inset:0;display:block}
+.portrait-frame img{width:100%;height:100%;object-fit:cover;display:block}
+/* Floating transparent-cutout mode — set data-portrait="cutout" on .hero-visual and
+   provide assets/portrait-cutout.webp; frame/tag drop away and the cutout floats. */
+.hero-visual[data-portrait="cutout"] .portrait-frame{background:none;box-shadow:none;overflow:visible;border-radius:0}
+.hero-visual[data-portrait="cutout"] .portrait-frame img{object-fit:contain;object-position:bottom;filter:drop-shadow(0 20px 36px rgba(23,35,31,.24));-webkit-mask-image:linear-gradient(to bottom,#000 92%,transparent);mask-image:linear-gradient(to bottom,#000 92%,transparent)}
+.hero-visual[data-portrait="cutout"] .portrait-tag{display:none}
+.portrait-tag{
+  position:absolute;top:14px;left:14px;
+  background:rgba(255,253,247,.9);backdrop-filter:blur(6px);
+  border:1px solid var(--line);border-radius:999px;
+  font-family:'IBM Plex Mono',monospace;font-size:.64rem;letter-spacing:.12em;
+  color:var(--green);padding:6px 13px;white-space:nowrap;
+}
+.hero-chip{
+  position:absolute;z-index:2;bottom:-18px;right:-14px;background:var(--surface);
+  border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);
+  padding:13px 16px;display:flex;align-items:center;gap:12px;max-width:230px;
+}
+.hero-chip .spark svg{display:block}
+.hero-chip .ct{display:flex;flex-direction:column;gap:1px}
+.hero-chip .ct .a{font-family:'IBM Plex Mono',monospace;font-size:.6rem;letter-spacing:.12em;color:var(--muted);text-transform:uppercase}
+.hero-chip .ct .b{font-family:'Fraunces',serif;font-weight:600;color:var(--green);font-size:1.02rem;line-height:1.1}
+.hero-chip .ct .b em{font-style:normal;color:var(--gold-deep)}
+@media(max-width:900px){
+  .hero{padding:calc(var(--nav-h) + 30px) 0 60px}
+  .hero-grid{grid-template-columns:1fr;gap:40px}
+  .hero-visual{order:2;width:min(320px,78vw)}
+  .hero-metrics{gap:14px 22px}
+  .hero-metrics .hm .n{font-size:1.3rem}
+}
+
+/* ---------- proof strip (dark band) ---------- */
+.proof{background:var(--green);color:var(--bg)}
+.proof-in{display:grid;grid-template-columns:repeat(4,1fr)}
+.proof-item{padding:34px 26px;border-right:1px solid rgba(246,241,232,.12)}
+.proof-item:last-child{border-right:none}
+.proof-item .num{font-family:'Fraunces',serif;font-size:2.1rem;font-weight:600;color:#e8c672;line-height:1;font-variant-numeric:tabular-nums}
+.proof-item .lbl{font-size:.82rem;color:rgba(246,241,232,.72);margin-top:8px}
+@media(max-width:760px){
+  .proof-in{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .proof-item .num{font-size:1.7rem;overflow-wrap:anywhere}
+  .proof-item:nth-child(2){border-right:none}
+  .proof-item:nth-child(-n+2){border-bottom:1px solid rgba(246,241,232,.12)}
+}
+
+/* ---------- about ---------- */
+.about-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:48px;align-items:start;margin-top:30px}
+.about-grid p{color:var(--muted);margin-bottom:16px;font-size:1.02rem}
+.about-grid p strong{color:var(--ink);font-weight:600}
+.edge{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:28px;box-shadow:var(--shadow-sm)}
+.edge h3{font-size:1.2rem;color:var(--green);margin-bottom:12px}
+.edge p{color:var(--muted);font-size:.96rem;margin:0}
+.edge .tags{margin-top:18px}
+@media(max-width:880px){.about-grid{grid-template-columns:1fr}}
+
+/* ---------- featured systems ---------- */
+.sys{
+  background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+  padding:38px;margin-top:26px;display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center;
+  box-shadow:var(--shadow-sm);transition:box-shadow .3s,transform .3s,border-color .3s;
+}
+.sys:hover{box-shadow:var(--shadow);transform:translateY(-3px);border-color:var(--line-strong)}
+.sys-no{font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.24em;color:var(--gold-deep);margin-bottom:10px}
+.sys h3{font-size:1.5rem;margin-bottom:16px}
+.sys-metric{display:flex;align-items:baseline;gap:10px;background:var(--surface-soft);border:1px solid var(--line);border-radius:12px;padding:12px 16px;margin-bottom:18px;width:fit-content;max-width:100%;flex-wrap:wrap}
+.sys-metric b{font-family:'Fraunces',serif;font-size:1.55rem;color:var(--green);font-weight:600;line-height:1}
+.sys-metric span{font-size:.82rem;color:var(--muted)}
+.sys-line{color:var(--muted);font-size:.96rem;margin-bottom:12px}
+.sys-line em{font-style:normal;font-family:'IBM Plex Mono',monospace;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--teal-deep);display:block;margin-bottom:2px}
+.sys .tags{margin-top:18px}
+.sys-visual{min-width:0}
+@media(max-width:900px){
+  .sys{grid-template-columns:1fr;gap:28px;padding:28px 22px}
+  .sys-visual{order:2}
+}
+
+/* ---------- mock UI (CSS/SVG) ---------- */
+.mock{background:var(--surface);border:1px solid var(--line-strong);border-radius:14px;box-shadow:var(--shadow);overflow:hidden;font-family:'Outfit',sans-serif}
+.mock-top{display:flex;align-items:center;gap:7px;padding:11px 14px;background:var(--surface-soft);border-bottom:1px solid var(--line)}
+.mock-top .dot{width:9px;height:9px;border-radius:50%;background:var(--line-strong)}
+.mock-top .dot:nth-child(1){background:#d98b7a}.mock-top .dot:nth-child(2){background:#e0c06a}.mock-top .dot:nth-child(3){background:#8bb29f}
+.mock-title{margin-left:8px;font-family:'IBM Plex Mono',monospace;font-size:.68rem;letter-spacing:.08em;color:var(--muted)}
+.mock-body{padding:16px}
+.kpi-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px;margin-bottom:14px}
+.kpi{background:var(--surface-soft);border:1px solid var(--line);border-radius:9px;padding:10px}
+.kpi .kpi-lbl{font-size:.6rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.kpi .kpi-val{font-family:'Fraunces',serif;font-weight:600;color:var(--green);font-size:1.02rem;line-height:1.2;margin-top:2px}
+.kpi .kpi-val.warn{color:#9a4c1c}
+.chart{width:100%;height:64px;margin-bottom:14px}
+.mrow{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:9px 2px;border-top:1px solid var(--line);font-size:.8rem;color:var(--ink)}
+.mrow:first-of-type{border-top:none}
+.pill{font-family:'IBM Plex Mono',monospace;font-size:.62rem;letter-spacing:.04em;padding:3px 10px;border-radius:999px;white-space:nowrap}
+.pill.ok{background:rgba(47,127,117,.14);color:var(--teal-deep)}
+.pill.due{background:rgba(184,135,45,.16);color:var(--gold-deep)}
+.pill.over{background:rgba(180,99,43,.15);color:#a2531f}
+/* crm */
+.unit-grid{display:grid;grid-template-columns:repeat(8,1fr);gap:5px;margin-bottom:12px}
+.u{aspect-ratio:1;border-radius:4px;background:var(--surface-soft);border:1px solid var(--line)}
+.u.res{background:rgba(184,135,45,.35);border-color:rgba(184,135,45,.5)}
+.u.sold{background:var(--teal);border-color:var(--teal-deep)}
+.legend{display:flex;gap:14px;flex-wrap:wrap;font-size:.64rem;color:var(--muted);margin-bottom:12px}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:5px;vertical-align:-1px}
+.legend .a{background:var(--surface-soft);border:1px solid var(--line)}.legend .b{background:rgba(184,135,45,.35)}.legend .c{background:var(--teal)}
+/* flow */
+.flow{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:16px}
+.node{display:flex;align-items:center;gap:7px;background:var(--surface-soft);border:1px solid var(--line);border-radius:9px;padding:8px 11px;font-size:.72rem;color:var(--green);font-weight:500;white-space:nowrap}
+.node .ni{width:16px;height:16px;flex:none}
+.flow .arr{color:var(--gold);font-weight:700}
+.wa{background:#e8f2ec;border:1px solid rgba(47,127,117,.25);border-radius:12px 12px 12px 4px;padding:11px 13px;max-width:100%}
+.wa .wa-h{font-size:.72rem;font-weight:600;color:var(--green);margin-bottom:4px}
+.wa .wa-t{font-size:.72rem;color:var(--muted);line-height:1.5}
+.wa .wa-m{display:flex;justify-content:flex-end;align-items:center;gap:4px;font-family:'IBM Plex Mono',monospace;font-size:.6rem;color:var(--teal-deep);margin-top:6px}
+
+/* ---------- services ---------- */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:28px 24px;transition:.28s;box-shadow:var(--shadow-sm)}
+.card:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:var(--line-strong)}
+.card .ico{width:44px;height:44px;border-radius:11px;background:var(--surface-soft);border:1px solid var(--line);display:grid;place-items:center;margin-bottom:16px}
+.card h3{font-size:1.14rem;margin-bottom:9px}
+.card p{color:var(--muted);font-size:.92rem;margin-bottom:16px}
+@media(max-width:880px){.cards{grid-template-columns:1fr}}
+
+/* ---------- experience ---------- */
+.timeline{margin-top:44px;position:relative;padding-left:30px}
+.timeline::before{content:"";position:absolute;left:5px;top:6px;bottom:6px;width:2px;background:var(--line)}
+.trow{position:relative;margin-bottom:38px}
+.trow:last-child{margin-bottom:0}
+.trow::before{content:"";position:absolute;left:-29.5px;top:7px;width:11px;height:11px;border-radius:50%;background:var(--bg);border:2px solid var(--gold)}
+.trow .when{font-family:'IBM Plex Mono',monospace;font-size:.7rem;color:var(--gold-deep);letter-spacing:.1em}
+.trow h3{font-size:1.16rem;margin:6px 0 2px;color:var(--green)}
+.trow .org{color:var(--teal-deep);font-size:.9rem;font-weight:500;margin-bottom:10px}
+.trow ul{list-style:none}
+.trow li{color:var(--muted);font-size:.92rem;padding-left:16px;position:relative;margin-bottom:5px}
+.trow li::before{content:"";position:absolute;left:0;top:11px;width:6px;height:1px;background:var(--gold)}
+
+/* ---------- skills ---------- */
+.skill-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:44px}
+.skill-box{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:24px;box-shadow:var(--shadow-sm)}
+.skill-box h3{font-size:1rem;margin-bottom:15px;display:flex;align-items:center;gap:9px;color:var(--green)}
+@media(max-width:880px){.skill-grid{grid-template-columns:1fr}}
+.edu-row{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:20px}
+.edu-box{border:1px solid var(--line);border-radius:var(--radius);padding:22px;background:var(--surface);box-shadow:var(--shadow-sm)}
+.edu-box .when{font-family:'IBM Plex Mono',monospace;font-size:.66rem;color:var(--gold-deep);letter-spacing:.12em}
+.edu-box h3{font-size:1rem;margin:8px 0 4px;color:var(--green)}
+.edu-box p{color:var(--muted);font-size:.85rem}
+@media(max-width:880px){.edu-row{grid-template-columns:1fr}}
+
+/* ---------- contact ---------- */
+.contact{background:var(--surface-soft);border-top:1px solid var(--line)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:start;margin-top:24px}
+.contact-list{list-style:none;margin-top:8px}
+.contact-list li{display:flex;justify-content:space-between;gap:20px;padding:15px 8px;border-bottom:1px solid var(--line);font-size:.95rem;transition:background .2s;border-radius:8px}
+.contact-list li:hover{background:rgba(47,127,117,.06)}
+.contact-list .k{font-family:'IBM Plex Mono',monospace;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);padding-top:3px}
+.contact-list a{color:var(--teal-deep);font-weight:500}
+.contact-list a:hover{text-decoration:underline}
+.avail{display:inline-flex;align-items:center;gap:8px;font-size:.82rem;color:var(--teal-deep);font-weight:500;margin-top:6px}
+.avail .d{width:8px;height:8px;border-radius:50%;background:var(--teal);box-shadow:0 0 0 4px rgba(47,127,117,.18)}
+@media(max-width:880px){.contact-grid{grid-template-columns:1fr}}
+footer{background:var(--green);color:var(--bg);padding:30px 0;text-align:center}
+footer p{font-family:'IBM Plex Mono',monospace;font-size:.7rem;color:rgba(246,241,232,.7);letter-spacing:.1em}
+
+/* ---------- reveal (no-JS safe: only active when .js present) ---------- */
+/* Reveal is transform-only: content stays fully visible (opacity 1) even if a
+   section is never scrolled into view — so audits/no-scroll renders never show
+   blank sections. */
+.js .rv{transform:translateY(16px);transition:transform .7s ease}
+.js .rv.on{transform:none}
+.js .enter{opacity:0;animation:rise .7s cubic-bezier(.2,.7,.2,1) forwards}
+@keyframes rise{to{opacity:1;transform:none}}
+.d1{animation-delay:.04s}.d2{animation-delay:.14s}.d3{animation-delay:.26s}.d4{animation-delay:.38s}.d5{animation-delay:.5s}
+.roles{font-family:'IBM Plex Mono',monospace;font-size:.8rem;letter-spacing:.1em;color:var(--muted);margin-top:14px;min-height:1.4em}
+.roles b{color:var(--teal-deep);font-weight:600}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .js .rv,.js .enter{opacity:1;transform:none;transition:none;animation:none}
+  *{transition:none!important;animation:none!important}
+}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <div class="nav-in">
+    <a class="brand" href="#top" aria-label="Ahmed Elshaer — home"><span class="mark" aria-hidden="true"><img src="assets/logo-mark.svg" alt="" width="30" height="30"></span>Ahmed <b>Elshaer</b></a>
+    <div class="nav-links" id="navLinks">
+      <a href="#about">About</a><a href="#systems">Systems</a><a href="#services">Services</a>
+      <a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#contact">Contact</a>
+    </div>
+    <div class="nav-right">
+      <a class="nav-cta" href="#contact">Work with me</a>
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#about">About</a><a href="#systems">Systems</a><a href="#services">Services</a>
+    <a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="hero-name enter d1">Ahmed Elshaer</div>
+      <h1 class="enter d2">I build <em>automation systems</em> for finance and operations teams.</h1>
+      <p class="hero-sub enter d3">I help teams replace manual spreadsheets, delayed reports, and inconsistent follow-up with <strong>practical systems for reporting, dashboards, collections, CRM workflows, and WhatsApp automation</strong>.</p>
+      <div class="roles enter d3">BUILDING / <b id="roleWord">Real Estate CRM &amp; Reservations</b></div>
+      <div class="hero-metrics enter d4">
+        <div class="hm"><div class="n">10 yrs</div><div class="l">Finance &amp; accounting</div></div>
+        <div class="hm"><div class="n">2 systems</div><div class="l">In use at my employer</div></div>
+        <div class="hm"><div class="n">Self-taught</div><div class="l">AI-assisted development</div></div>
+      </div>
+      <div class="cta-row enter d5">
+        <a class="btn btn-green" href="#contact">Work with me</a>
+        <a class="btn btn-ghost" href="#systems">See systems</a>
+        <a class="btn btn-ghost" href="Ahmed_Elshaer_CV.pdf" download>Download CV ↓</a>
+      </div>
+    </div>
+    <div class="hero-visual enter d3" data-portrait="cutout">
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="portrait-frame">
+        <picture>
+          <!-- Floating transparent cutout (active). To revert to the framed photo:
+               set data-portrait="framed" on .hero-visual above and delete the cutout <source>. -->
+          <source srcset="assets/portrait-cutout.webp" type="image/webp">
+          <source srcset="assets/portrait-studio.webp" type="image/webp">
+          <img src="assets/portrait-studio.png" width="760" height="950" alt="Ahmed Elshaer, finance and operations automation specialist, professional portrait">
+        </picture>
+        <div class="portrait-tag">6TH OF OCTOBER · GIZA · EGYPT</div>
+      </div>
+      <div class="hero-chip" aria-hidden="true">
+        <span class="spark">
+          <svg width="46" height="30" viewBox="0 0 46 30" fill="none"><polyline points="1,26 9,20 17,23 25,12 33,15 45,3" stroke="#2f7f75" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        <span class="ct"><span class="a">Payment reminders</span><span class="b">WhatsApp · <em>automated</em></span></span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="proof">
+  <div class="wrap proof-in">
+    <div class="proof-item rv"><div class="num">10</div><div class="lbl">Years in finance &amp; accounting</div></div>
+    <div class="proof-item rv"><div class="num">2</div><div class="lbl">Systems in use at my employer</div></div>
+    <div class="proof-item rv"><div class="num">3</div><div class="lbl">Industries — real estate · tourism · investment</div></div>
+    <div class="proof-item rv"><div class="num" style="font-size:1.6rem">Self-taught</div><div class="lbl">AI-assisted development</div></div>
+  </div>
+</div>
+
+<section id="about">
+  <div class="wrap">
+    <div class="eyebrow rv">About</div>
+    <h2 class="sec-title rv">A finance professional who builds the systems</h2>
+    <div class="about-grid">
+      <div class="rv">
+        <p>Senior Financial Accountant with <strong>10 years of experience across real estate, tourism, and investment</strong>. Core expertise in accounts receivable &amp; payable, treasury, bank reconciliation, month-end close, financial reporting, and ERP workflows — with Odoo, QuickBooks, Advanced Excel, and Power BI.</p>
+        <p><strong>What sets me apart:</strong> I don't just run finance — I build the systems that make it faster and more reliable. Two systems I designed and built myself are in use at my current employer: a sales-cycle system that runs from unit booking to contract signature, and a collections app that follows up with customers over WhatsApp.</p>
+      </div>
+      <div class="edge rv">
+        <h3>How I work</h3>
+        <p>I start from the actual bottleneck — the report that takes hours, the follow-up that slips, the numbers nobody trusts — and build a small, dependable system around it. Management gets clear operational visibility every day.</p>
+        <div class="tags">
+          <span class="tag">Finance operations</span><span class="tag">Automation</span><span class="tag">Real-estate systems</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="systems" style="padding-top:0">
+  <div class="wrap">
+    <div class="eyebrow rv">Featured Systems</div>
+    <h2 class="sec-title rv">Systems built for real business operations</h2>
+    <p class="sec-lead rv">Practical automation systems built around real finance and operations bottlenecks — from collection reporting to CRM workflows and scheduled follow-up.</p>
+    <p class="sec-note rv">Most examples here come from real-estate operations — that's where my recent production work is strongest. The same workflow thinking applies to finance, reporting, and customer follow-up in any operations-heavy business.</p>
+
+    <!-- System 01 -->
+    <article class="sys rv">
+      <div class="sys-info">
+        <div class="sys-no">SYSTEM / 01</div>
+        <h3>Real Estate Sales-Cycle System</h3>
+        <div class="sys-metric"><b>Booking &rarr; signed contract</b><span>one workflow, in use at work</span></div>
+        <p class="sys-line"><em>Problem</em>The sales process lived in personal notes and scattered spreadsheets: leads, unit availability, reservations, and contracts were tracked by hand, and follow-ups slipped.</p>
+        <p class="sys-line"><em>Built</em>An end-to-end sales-cycle system that runs from unit booking to deal completion and contract signature &mdash; lead distribution, unit tracking, automatic contract generation, and cheque printing. In use at the company today.</p>
+        <p class="sys-line"><em>Impact</em>One workflow from first booking to signed contract: contracts and cheques come out of the system instead of being prepared by hand.</p>
+        <div class="tags"><span class="tag">AI-assisted development</span><span class="tag">HTML / CSS</span><span class="tag">JavaScript</span><span class="tag">React</span><span class="tag">CRM workflow</span><span class="tag">Contract generation</span><span class="tag">Cheque printing</span></div>
+      </div>
+<div class="sys-visual">
+        <div class="mock" role="img" aria-label="Real-estate CRM mockup showing a unit availability grid with available, reserved, and sold units, plus a list of leads assigned to agents with reservation status.">
+          <div class="mock-top"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="mock-title">sales cycle · CRM</span></div>
+          <div class="mock-body">
+            <div class="unit-grid" aria-hidden="true">
+              <span class="u"></span><span class="u res"></span><span class="u sold"></span><span class="u"></span><span class="u sold"></span><span class="u"></span><span class="u res"></span><span class="u"></span>
+              <span class="u sold"></span><span class="u"></span><span class="u"></span><span class="u res"></span><span class="u"></span><span class="u sold"></span><span class="u"></span><span class="u"></span>
+              <span class="u"></span><span class="u sold"></span><span class="u res"></span><span class="u"></span><span class="u"></span><span class="u"></span><span class="u sold"></span><span class="u res"></span>
+            </div>
+            <div class="legend"><span><i class="a"></i>Available</span><span><i class="b"></i>Reserved</span><span><i class="c"></i>Sold</span></div>
+            <div class="mrow"><span>Nour A. → Mostafa · C-14</span><span class="pill due">Reserved</span></div>
+            <div class="mrow"><span>Omar K. → Salma · A-06</span><span class="pill ok">Offer sent</span></div>
+            <div class="mrow"><span>Hana R. → Mostafa · D-22</span><span class="pill over">Follow-up</span></div>
+          </div>
+        </div>
+      </div>
+        <p class="mock-note">Illustrative demo screens · sample data</p>
+    </article>
+
+    <!-- System 02 -->
+    <article class="sys rv">
+      <div class="sys-info">
+        <div class="sys-no">SYSTEM / 02</div>
+        <h3>Collections Management Application</h3>
+        <div class="sys-metric"><b>WhatsApp reminders</b><span>follow-up in one place</span></div>
+        <p class="sys-line"><em>Problem</em>Installments and payments were followed up across scattered spreadsheets, so due dates and customer follow-up depended on memory and manual checking.</p>
+        <p class="sys-line"><em>Built</em>A collections-management application that tracks installments and payments, sends payment reminders to customers over WhatsApp, and centralizes follow-up in one place. In use at the company today.</p>
+        <p class="sys-line"><em>Impact</em>The team sees what is due, what is late, and who has been reminded &mdash; without chasing spreadsheets.</p>
+        <div class="tags"><span class="tag">Installment tracking</span><span class="tag">WhatsApp reminders</span><span class="tag">Payment follow-up</span><span class="tag">Reporting</span><span class="tag">AI-assisted development</span></div>
+      </div>
+<div class="sys-visual">
+        <div class="mock" role="img" aria-label="Collections dashboard mockup showing collected, overdue, and due amounts, a collection trend chart, and a list of customers with paid, due, and overdue status.">
+          <div class="mock-top"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="mock-title">collections · overview</span></div>
+          <div class="mock-body">
+            <div class="kpi-row">
+              <div class="kpi"><div class="kpi-lbl">Collected</div><div class="kpi-val">EGP 4.2M</div></div>
+              <div class="kpi"><div class="kpi-lbl">Overdue</div><div class="kpi-val warn">EGP 380K</div></div>
+              <div class="kpi"><div class="kpi-lbl">Due / wk</div><div class="kpi-val">17</div></div>
+            </div>
+            <svg class="chart" viewBox="0 0 300 64" preserveAspectRatio="none" aria-hidden="true">
+              <g fill="#cfe0d6">
+                <rect x="6"  y="30" width="26" height="34" rx="3"/><rect x="42" y="22" width="26" height="42" rx="3"/>
+                <rect x="78" y="34" width="26" height="30" rx="3"/><rect x="114" y="18" width="26" height="46" rx="3"/>
+                <rect x="150" y="26" width="26" height="38" rx="3"/>
+              </g>
+              <g fill="#2f7f75">
+                <rect x="186" y="14" width="26" height="50" rx="3"/><rect x="222" y="9" width="26" height="55" rx="3"/>
+                <rect x="258" y="4" width="26" height="60" rx="3"/>
+              </g>
+            </svg>
+            <div class="mrow"><span>Ahmed H. · unit A-102</span><span class="pill ok">Paid</span></div>
+            <div class="mrow"><span>Sara M. · unit B-311</span><span class="pill due">Due Jul 4</span></div>
+            <div class="mrow"><span>Khaled T. · unit C-207</span><span class="pill over">Overdue</span></div>
+          </div>
+        </div>
+      </div>
+        <p class="mock-note">Illustrative demo screens · sample data</p>
+    </article>
+  </div>
+</section>
+
+<section id="services" style="padding-top:0">
+  <div class="wrap">
+    <div class="eyebrow rv">What I Do</div>
+    <h2 class="sec-title rv">Services</h2>
+    <p class="sec-lead rv">Focused on finance and real-estate teams that want to stop doing manual work software should handle. Everything below is something I've built and run in production.</p>
+    <div class="cards">
+      <div class="card rv">
+        <div class="ico" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2f7f75" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M4 12h16M4 17h10"/><circle cx="19" cy="17" r="2"/></svg>
+        </div>
+        <h3>Finance &amp; Operations Workflow Automation</h3>
+        <p>Replace repetitive reporting, reconciliation, data entry, and follow-up work with reliable automated workflows.</p>
+        <div class="tags"><span class="tag">Workflow automation</span><span class="tag">Excel automation</span><span class="tag">Reporting automation</span><span class="tag">Automated reminders</span></div>
+      </div>
+      <div class="card rv">
+        <div class="ico" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2f7f75" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg>
+        </div>
+        <h3>Dashboards, Reporting &amp; Business Visibility</h3>
+        <p>Turn scattered spreadsheets and operational data into clear management reports, dashboards, and scheduled summaries.</p>
+        <div class="tags"><span class="tag">Power BI</span><span class="tag">Excel</span><span class="tag">PDF reports</span><span class="tag">Scheduled summaries</span></div>
+      </div>
+      <div class="card rv">
+        <div class="ico" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2f7f75" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H8l-4 4V5a2 2 0 0 1 2-2h13a2 2 0 0 1 2 2z"/><path d="M8 9h8M8 13h5"/></svg>
+        </div>
+        <h3>CRM, Follow-Up &amp; Communication Automation</h3>
+        <p>Automate lead and customer follow-up, WhatsApp reminders, task alerts, and sales or operations tracking workflows.</p>
+        <div class="tags"><span class="tag">CRM</span><span class="tag">WhatsApp</span><span class="tag">Follow-up</span><span class="tag">Task alerts</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="experience" style="padding-top:0">
+  <div class="wrap">
+    <div class="eyebrow rv">Experience</div>
+    <h2 class="sec-title rv">Career timeline</h2>
+    <p class="sec-lead rv">A decade of finance across real estate, investment, and tourism — most recently building the automation itself.</p>
+    <div class="timeline">
+      <div class="trow rv">
+        <div class="when">MAY 2025 — PRESENT</div>
+        <h3>Senior Financial Accountant</h3>
+        <div class="org">HIG Development — Real Estate</div>
+        <ul>
+          <li>Process accounts receivable and reconcile customer accounts for real-estate operations</li>
+          <li>Prepare monthly P&amp;L and balance-sheet schedules and bank reconciliations supporting the close</li>
+          <li>Support sales-process control, sales-agent schemes, and commission tracking</li>
+          <li>Designed and built the sales-cycle and collections systems now in use at the company</li>
+        </ul>
+      </div>
+      <div class="trow rv">
+        <div class="when">FEB 2024 — PRESENT</div>
+        <h3>Process Automation Developer</h3>
+        <div class="org">Freelance / Personal Projects</div>
+        <ul>
+          <li>Build business workflow tools with AI-assisted development — HTML, CSS, JavaScript, React, automation scripting</li>
+          <li>Develop real-estate reservation and CRM workflows for lead distribution, unit tracking, and sales coordination</li>
+          <li>Create reporting and process-automation tools that reduce manual follow-up</li>
+        </ul>
+      </div>
+      <div class="trow rv">
+        <div class="when">SEP 2023 — JUN 2024</div>
+        <h3>Sales Account Manager</h3>
+        <div class="org">ECC Group</div>
+        <ul>
+          <li>Managed client relationships as primary point of contact and executed sales strategies</li>
+          <li>Identified upsell and cross-sell opportunities; prepared sales reports and forecasts</li>
+        </ul>
+      </div>
+      <div class="trow rv">
+        <div class="when">MAR 2022 — AUG 2023</div>
+        <h3>General Accountant</h3>
+        <div class="org">ECC Group</div>
+        <ul>
+          <li>Processed AP/AR transactions and reconciled vendor and customer accounts</li>
+          <li>Prepared monthly financial statements and accounting schedules for senior review</li>
+          <li>Assisted with payroll, expense reimbursements, and closing documentation</li>
+        </ul>
+      </div>
+      <div class="trow rv">
+        <div class="when">MAR 2021 — DEC 2021</div>
+        <h3>Digital Marketing Specialist</h3>
+        <div class="org">MarketingTaza — Freelance</div>
+        <ul>
+          <li>Built WordPress websites and supported Shopify stores with technical and on-page SEO</li>
+          <li>Ran Google Ads and Facebook Ads campaigns with Analytics performance reporting</li>
+        </ul>
+      </div>
+      <div class="trow rv">
+        <div class="when">JUL 2013 — FEB 2021</div>
+        <h3>General Accountant</h3>
+        <div class="org">Regens Investment Tourism</div>
+        <ul>
+          <li>Reviewed invoices, matched them to checks, and distributed payments</li>
+          <li>Reconciled vendor statements, corrected discrepancies, and processed expense reports</li>
+          <li>Monitored accounts to keep payments current and assisted in month-end closing</li>
+        </ul>
+      </div>
+      <div class="trow rv">
+        <div class="when">JUL 2012 — JUN 2013</div>
+        <h3>Senior Sales Executive</h3>
+        <div class="org">Etisalat Misr</div>
+        <ul>
+          <li>Sold telecom products and services and managed customer accounts</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="skills" style="padding-top:0">
+  <div class="wrap">
+    <div class="eyebrow rv">Skills &amp; Tools</div>
+    <h2 class="sec-title rv">Finance-fluent. Tech-capable.</h2>
+    <div class="skill-grid">
+      <div class="skill-box rv"><h3>Finance &amp; Accounting</h3><div class="tags"><span class="tag">Odoo ERP</span><span class="tag">QuickBooks</span><span class="tag">Treasury</span><span class="tag">Bank Reconciliation</span><span class="tag">Month-End Close</span><span class="tag">AR / AP</span><span class="tag">Basic SAP</span></div></div>
+      <div class="skill-box rv"><h3>Automation &amp; Workflow Design</h3><div class="tags"><span class="tag">AI-Assisted Development</span><span class="tag">Workflow Automation</span><span class="tag">Reporting Automation</span><span class="tag">Process Design</span><span class="tag">Scheduled Jobs</span></div></div>
+      <div class="skill-box rv"><h3>Reporting &amp; Analytics</h3><div class="tags"><span class="tag">Advanced Excel</span><span class="tag">PivotTables</span><span class="tag">Power BI</span><span class="tag">Financial Reporting</span><span class="tag">Data Analysis</span></div></div>
+      <div class="skill-box rv"><h3>CRM &amp; Operations</h3><div class="tags"><span class="tag">Customer Follow-up</span><span class="tag">CRM Workflows</span><span class="tag">Reservations</span><span class="tag">Commission Tracking</span><span class="tag">Collections</span></div></div>
+      <div class="skill-box rv"><h3>Development Tools</h3><div class="tags"><span class="tag">JavaScript</span><span class="tag">React</span><span class="tag">HTML / CSS</span><span class="tag">Automation scripting</span><span class="tag">Git</span></div></div>
+      <div class="skill-box rv"><h3>Languages</h3><div class="tags"><span class="tag">Arabic — native</span><span class="tag">English — professional</span></div></div>
+    </div>
+
+    <h2 class="eyebrow rv" style="margin-top:60px">Education &amp; Certifications</h2>
+    <div class="edu-row">
+      <div class="edu-box rv"><div class="when">2009 — 2012</div><h3>Bachelor of Commerce</h3><p>Ain Shams University — Financial &amp; Cost Accounting, Programming Fundamentals</p></div>
+      <div class="edu-box rv"><div class="when">FEB 2020</div><h3>The Art of Sales: Mastering the Selling Process</h3><p>Specialization — Northwestern University, Kellogg School of Management</p></div>
+      <div class="edu-box rv"><div class="when">CERTIFICATIONS</div><h3>Finance &amp; Digital</h3><p>The Fundamentals of Digital Marketing — Google (2021) · QuickBooks Fundamentals · Advanced Excel</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div>
+        <div class="eyebrow rv">Contact</div>
+        <h2 class="sec-title rv">Let's work together</h2>
+        <p class="sec-lead rv">Available for finance operations, reporting automation, CRM workflows, and business process automation projects. I usually reply within 24 hours.</p>
+        <div class="avail rv"><span class="d"></span>Available for new projects</div>
+        <div class="cta-row rv" style="margin-top:22px">
+          <a class="btn btn-green" href="https://wa.me/201004650795" target="_blank" rel="noopener">Chat on WhatsApp</a>
+          <a class="btn btn-ghost" href="mailto:Ahmed_Elshaer@att.net">Send an email</a>
+          <a class="btn btn-ghost" href="Ahmed_Elshaer_CV.pdf" download>Download CV ↓</a>
+        </div>
+      </div>
+      <ul class="contact-list rv">
+        <li><span class="k">Email</span><a href="mailto:Ahmed_Elshaer@att.net">Ahmed_Elshaer@att.net</a></li>
+        <li><span class="k">Phone</span><a href="tel:+201004650795">+20 100 465 0795</a></li>
+        <li><span class="k">WhatsApp</span><a href="https://wa.me/201004650795" target="_blank" rel="noopener">wa.me/201004650795</a></li>
+        <li><span class="k">LinkedIn</span><a href="https://www.linkedin.com/in/ahmed-elshaaaer" target="_blank" rel="noopener">in/ahmed-elshaaaer</a></li>
+        <li><span class="k">Location</span><span>6th of October, Giza, Egypt</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap"><p>© 2026 AHMED ELSHAER — SENIOR FINANCIAL ACCOUNTANT · FINANCE &amp; AI AUTOMATION</p></div>
+</footer>
+
+<script>
+const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+// Scroll reveals (progressive enhancement; content is visible without JS)
+const io = new IntersectionObserver(es => {
+  es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); } });
+}, { threshold: .12 });
+document.querySelectorAll('.rv').forEach(el => io.observe(el));
+
+// Ledger count-up — final values already in markup; animate only as enhancement
+if (!reduced) {
+  const nio = new IntersectionObserver(es => {
+    es.forEach(e => {
+      if (!e.isIntersecting) return;
+      const el = e.target;
+      if (el.dataset.count === undefined) return;
+      const target = +el.dataset.count, suf = el.dataset.suffix || '';
+      nio.unobserve(el);
+      const t0 = performance.now(), dur = 1100;
+      (function tick(t){
+        const p = Math.min((t - t0) / dur, 1);
+        el.textContent = Math.round(target * (1 - Math.pow(1 - p, 3))) + suf;
+        if (p < 1) requestAnimationFrame(tick);
+        else el.textContent = target + suf;
+      })(t0);
+    });
+  }, { threshold: .6 });
+  document.querySelectorAll('.num[data-count]').forEach(el => nio.observe(el));
+}
+
+// Navbar: shadow on scroll + active section indicator
+const nav = document.getElementById('nav');
+const links = [...document.querySelectorAll('.nav-links a')];
+const sections = links.map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean);
+let ticking = false;
+addEventListener('scroll', () => {
+  if (ticking) return; ticking = true;
+  requestAnimationFrame(() => {
+    nav.classList.toggle('scrolled', scrollY > 30);
+    const y = scrollY + innerHeight * .32;
+    let current = null;
+    sections.forEach(s => { if (s.offsetTop <= y) current = '#' + s.id; });
+    links.forEach(a => a.classList.toggle('active', a.getAttribute('href') === current));
+    ticking = false;
+  });
+}, { passive: true });
+
+// Mobile menu
+const burger = document.getElementById('burger');
+const menu = document.getElementById('mobileMenu');
+burger.addEventListener('click', () => {
+  const open = menu.classList.toggle('open');
+  burger.setAttribute('aria-expanded', open);
+  burger.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+});
+menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+  menu.classList.remove('open');
+  burger.setAttribute('aria-expanded', 'false');
+  burger.setAttribute('aria-label', 'Open menu');
+}));
+
+// Rotating role keywords (skipped under reduced motion)
+const roles = [
+  'Real Estate Sales-Cycle Systems',
+  'Collections & WhatsApp Reminders',
+  'Finance Reporting & Dashboards',
+  'CRM & Reservation Workflows',
+  'Business Process Automation'
+];
+const roleEl = document.getElementById('roleWord');
+if (roleEl && !reduced) {
+  roleEl.style.transition = 'opacity .3s ease';
+  let i = 0;
+  setInterval(() => {
+    roleEl.style.opacity = 0;
+    setTimeout(() => {
+      i = (i + 1) % roles.length;
+      roleEl.textContent = roles[i];
+      roleEl.style.opacity = 1;
+    }, 300);
+  }, 3200);
+}
+</script>
+</body>
+</html>
